@@ -24,6 +24,8 @@ Route::middleware(['auth'])->group(function () {
 
     Route::post('/setModal', [KasirController::class, 'setModalAwal']);
     Route::get('/checkUserTransaction', [KasirController::class, 'checkUserTransaction']);
+
+    Route::post('/setSetoran', [KasirController::class, 'setTutupKasir']);
 });
 
 

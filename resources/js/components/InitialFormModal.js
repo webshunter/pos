@@ -33,7 +33,8 @@ const InitialFormModal = ({ isOpen, onClose, onSubmit }) => {
     e.preventDefault();
     setError('')
     try {
-      const responseData = await postModalAwal({ username, password, awal: modal });
+      const modalNumeric = Number(modal.replace(/\./g, ''));
+      const responseData = await postModalAwal({ username, password, awal: modalNumeric });
       onClose();
       alert(responseData.message);
     } catch (error) {
